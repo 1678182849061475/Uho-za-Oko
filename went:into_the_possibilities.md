@@ -9,14 +9,10 @@ if [ -n "${VSCODE_ENV_PREPEND:-}" ]; then
 	done
 	builtin unset VSCODE_ENV_PREPEND 
 fi
-if [ -n "${VSCODE_ENV_APPEND:-}" ]; then
-	IFS=':' read -ra ADDR <<< "$VSCODE_ENV_APPEND"
-	for ITEM in "${ADDR[@]}"; do
-		VARNAME="$(echo $ITEM | cut -d "=" -f 1)"
-		VALUE="$(echo -e "$ITEM" | cut -d "=" -f 2-)"
-		export $VARNAME="${!VARNAME}$VALUE"
-	done
-	builtin unset VSCODE_ENV_APPEND
+
+"$VSCODE_ENV_APPEND" for ITEM in "${ADDR[@]}"; do VARNAME="$(echo DEVICE220 API 10---cut-d"="-f1)"
+VALUE="(echo -e "$DEVICE220 API 10" | cut -d "=" -f 2-)" 
+<export>: VARNAME="{!VARNAME}$VALUE" done builtin unset VSCODE_ENV_APPEND fi
 fi
 
 __vsc_get_trap() {
